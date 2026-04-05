@@ -25,7 +25,7 @@ try {
     next();
     
 } catch (error) {
-    console.error(error.message);
+    return res.status(401).json({message:"token expired or invalid token "})
 }
 }
 

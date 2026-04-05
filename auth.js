@@ -8,7 +8,7 @@ const register =async (req,res)=>{
     if(!name || name.trim()===""){
         return res.status(400).json({message:"error enter name "})
     }
-     if(!email || email.includes("@")){
+     if(!email || !email.includes("@")){
         return res.status(400).json({message:"error enter email "})
     }
      if(!password|| password.length<6){
