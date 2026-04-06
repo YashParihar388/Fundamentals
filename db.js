@@ -5,13 +5,13 @@
 
  const db = new sqlite3.Database("./Database.db",(err)=>{
     if(err){
-        err.message(err)
+        console.error(err.message);
     }else{
-        console.log("connection established")
+        console.log("connection established");
     }
  })
 
- export {db};
+ export  default {db};
 
 
  
